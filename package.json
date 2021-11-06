@@ -1,0 +1,31 @@
+{
+  "name": "gdrtools.it",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lomby92/gdrtools.it.git"
+  },
+  "author": "Giacomo Lombardi",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lomby92/gdrtools.it/issues"
+  },
+  "homepage": "https://github.com/lomby92/gdrtools.it#readme",
+  "dependencies": {
+    "@mantine/core": "^3.1.6",
+    "gatsby": "^4.1.0",
+    "gatsby-plugin-manifest": "^4.1.0",
+    "gatsby-plugin-offline": "^5.1.0",
+    "react": "^17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
