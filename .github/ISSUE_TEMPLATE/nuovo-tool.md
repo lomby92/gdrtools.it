@@ -2,7 +2,7 @@
 name: Nuovo tool
 about: Specifica come dovrebbe funzionare un nuovo tool
 title: ''
-labels: ''
+labels: feature
 assignees: ''
 
 ---
