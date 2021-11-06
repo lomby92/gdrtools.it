@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <header style={{backgroundColor: backgroundColor, padding: '0 1rem'}}>
             <Anchor component={Link} to="/">
-                <Title style={{color: textColor}}>GDRTool.it</Title>
+                <Title style={{color: textColor}}>GDRTools.it</Title>
             </Anchor>
         </header>
     );
