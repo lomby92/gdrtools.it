@@ -48,8 +48,8 @@ const Layout = ({ children }) => {
             {
               breadcrumbsItems.length > 1 &&
               <>
-                <Breadcrumbs separator={<MdDoubleArrow/>} style={{paddingBottom: '1rem'}}>{breadcrumbsItems}</Breadcrumbs>
-                <Divider style={{paddingBottom: '2rem'}}/>
+                <Breadcrumbs separator={<MdDoubleArrow/>} style={{paddingBottom: '1rem', flexWrap: 'wrap'}}>{breadcrumbsItems}</Breadcrumbs>
+                <Divider style={{paddingBottom: '1rem'}}/>
               </>
             }
             {children}

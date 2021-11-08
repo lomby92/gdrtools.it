@@ -1,7 +1,6 @@
-import { Button, Center, Text } from "@mantine/core"
-import { Link } from "gatsby"
+import { Center } from "@mantine/core"
 import * as React from "react"
-import { GiHammerNails } from "react-icons/gi"
+import GestoreOrologio from "../../../components/fabula-ultima/gestore-orologi/GestoreOrologio"
 import Layout from "../../../components/Layout"
 import FabulaUltimaTheme from "../../../themes/FabulaUltimaTheme"
 
@@ -10,16 +9,7 @@ const GestoreOrologi = () => {
     <FabulaUltimaTheme>
       <Layout>
         <Center>
-          <Text color='teal' align='center'>
-            <GiHammerNails style={{fontSize: '4rem'}}/>
-            <br/>
-            Pagina in costruzione
-          </Text>
-        </Center>
-        <Center style={{paddingTop: '2rem'}}>
-          <Button variant="outline" radius="xl" size="md" uppercase component={Link} to="/">
-            Ritorna alla pagina principale
-          </Button>
+          <GestoreOrologio/>
         </Center>
       </Layout>
     </FabulaUltimaTheme>
