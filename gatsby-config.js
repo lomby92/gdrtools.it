@@ -22,5 +22,34 @@ module.exports = {
         ],
       },
     },
+    /**
+     * Sources
+     */
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    /**
+     * Transformers
+     */
+     `gatsby-plugin-image`,
+     `gatsby-transformer-sharp`,
+     {
+       resolve: `gatsby-plugin-sharp`,
+       options: {
+         defaults: {
+           formats: [
+             `auto`,
+             `webp`,
+             `avif`,
+           ],
+           quality: 100,
+           placeholder: "blurred",
+         },
+       },
+     },
   ],
 };
