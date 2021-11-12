@@ -105,29 +105,31 @@ export default class GestoreOrologio extends React.Component {
     render() {
         return (
             <div style={{display: 'flex', flexDirection: 'column'}}>
-                <Text>
-                    <Title order={3}>Configura numero di spicchi</Title>
-                </Text>
                 {
                     this.state.showSlider
                     &&
-                    <Slider
-                        size="lg"
-                        showLabelOnHover={false}
-                        marks={[
-                            { value: 4, label: 4 },
-                            { value: 6, label: 6 },
-                            { value: 8, label: 8 },
-                            { value: 10, label: 10 },
-                            { value: 12, label: 12 },
-                        ]}
-                        step={2}
-                        defaultValue={this.state.sectionsCount}
-                        min={4}
-                        max={12}
-                        onChange={this.updateSectionsCount}
-                        style={{margin: '1rem 0.5rem'}}
-                    />
+                    <>
+                        <Text>
+                            <Title order={3}>Configura numero di spicchi</Title>
+                        </Text>
+                        <Slider
+                            size="lg"
+                            showLabelOnHover={false}
+                            marks={[
+                                { value: 4, label: 4 },
+                                { value: 6, label: 6 },
+                                { value: 8, label: 8 },
+                                { value: 10, label: 10 },
+                                { value: 12, label: 12 },
+                            ]}
+                            step={2}
+                            defaultValue={this.state.sectionsCount}
+                            min={4}
+                            max={12}
+                            onChange={this.updateSectionsCount}
+                            style={{margin: '1rem 0.5rem'}}
+                        />
+                    </>
                 }
                 <Center>
                     <Button
@@ -169,14 +171,24 @@ export default class GestoreOrologio extends React.Component {
                 </Center>
                 <Divider style={{margin: '1rem'}}/>
                 <Grid columns={2}>
-                    <Col span={2}>
-                        <canvas ref={this.canvasRef} style={{width: '100%', aspectRatio: '1'}}/>
+                    <Col
+                        span={2}
+                        style={{
+                            // Height between 25% and 50% of the viewport height.
+                            // Default value set to 30% of the width (to appear proportionate)
+                            minHeight: '25vh',
+                            height: '30vw',
+                            maxHeight: '50vh',
+                            textAlign: 'center',
+                        }}
+                    >
+                        <canvas ref={this.canvasRef} style={{height: '100%', aspectRatio: '1'}}/>
                     </Col>
                     <Col span={1} style={{textAlign: 'center'}}>
-                        <Button size='lg' onClick={this.decreaseActiveSections}>-</Button>
+                        <Button size='md' onClick={this.decreaseActiveSections}>-</Button>
                     </Col>
                     <Col span={1} style={{textAlign: 'center'}}>
-                        <Button size='lg' onClick={this.increaseActiveSections}>+</Button>
+                        <Button size='md' onClick={this.increaseActiveSections}>+</Button>
                     </Col>
                 </Grid>
             </div>
