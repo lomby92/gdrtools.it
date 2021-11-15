@@ -4,6 +4,7 @@ import * as React from "react"
 import { FaFeather } from "react-icons/fa"
 import { GiBadGnome, GiSeaTurtle } from "react-icons/gi"
 import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 import DefaultTheme from "../themes/DefaultTheme"
 
 const IndexPage = () => {
@@ -14,6 +15,10 @@ const IndexPage = () => {
   return (
     <DefaultTheme>
       <Layout>
+      <Seo
+        title="Home"
+        description="Raccolta di tool per diversi giochi di ruolo. Open source e senza scopo di lucro"
+      />
       <Title order={2}>Disclamer</Title>
         <Text>Questo sito contiene un insieme di tool per aiutare giocatori e master nei GDR. Tutto il codice è open source e senza scopo di lucro</Text>
 

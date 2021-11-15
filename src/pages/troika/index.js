@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import * as React from "react"
 import { GiHammerNails } from "react-icons/gi"
 import Layout from "../../components/Layout"
+import Seo from "../../components/Seo"
 import TroikaTheme from "../../themes/TroikaTheme"
 
 const IndexPage = () => {
@@ -10,6 +11,10 @@ const IndexPage = () => {
     <TroikaTheme>
       <Layout>
         <Center>
+          <Seo
+            title="Tool per Troika!"
+            description="Raccolta di tool per il gioco Troika!"
+          />
           <Text color='orange' align='center'>
             <GiHammerNails style={{fontSize: '4rem'}}/>
             <br/>

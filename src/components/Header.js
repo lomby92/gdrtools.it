@@ -5,7 +5,7 @@ import React from "react";
 
 const query = graphql`
 {
-  logo: file(base: {eq: "icon.png"}, sourceInstanceName: {eq: "images"}) {
+  logo: file(base: {eq: "logo.png"}, sourceInstanceName: {eq: "images"}) {
     childImageSharp {
       gatsbyImageData(
         layout: FIXED,

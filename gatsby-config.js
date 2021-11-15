@@ -1,4 +1,15 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
+  siteMetadata: {
+    title: "GDRTools.it",
+    titleTemplate: "%s | GDRTools.it",
+    description: `Raccolta di tool open source senza scopro di lucro per vari giochi di ruolo`,
+    siteUrl: "https://www.gdrtools.it",
+    image: "/images/logo.png",
+  },
   plugins: [
      {
       resolve: `gatsby-plugin-manifest`,
@@ -9,7 +20,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#25262b`, // Use the 7th color of background for default theme
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/logo.png`,
       },
     },
     {
@@ -22,6 +33,22 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        // The env is read from GATSBY_ACTIVE_ENV, falling back to NODE_ENV
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+    `gatsby-plugin-react-helmet`,
     /**
      * Sources
      */
