@@ -35,7 +35,12 @@ const Header = () => {
                 <GatsbyImage
                     image={logo.childImageSharp.gatsbyImageData}
                     alt="logo"
-                    style={{borderRadius: '0.5rem'}}
+                    style={{
+                      borderColor: textColor,
+                      borderRadius: '0.5rem',
+                      borderStyle: 'solid',
+                      borderWidth: '0.25rem',
+                    }}
                 />
                 <Title style={{color: textColor, paddingLeft: '0.5rem'}}>GDRTools.it</Title>
             </Anchor>

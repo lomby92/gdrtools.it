@@ -32,7 +32,7 @@ export default class GestoreOrologio extends React.Component {
     }
 
     decreaseActiveSections() {
-        this.setState({activeSections: Math.max(0, --this.state.activeSections)});
+        this.setState({activeSections: Math.max(0, this.state.activeSections - 1)});
     }
 
     drawClock() {
@@ -97,7 +97,7 @@ export default class GestoreOrologio extends React.Component {
 
     increaseActiveSections() {
         this.setState({
-            activeSections: Math.min(this.state.sectionsCount, ++this.state.activeSections),
+            activeSections: Math.min(this.state.sectionsCount, this.state.activeSections + 1),
             showSlider: false,
         });
     }
@@ -185,10 +185,18 @@ export default class GestoreOrologio extends React.Component {
                         <canvas ref={this.canvasRef} style={{height: '100%', aspectRatio: '1'}}/>
                     </Col>
                     <Col span={1} style={{textAlign: 'center'}}>
-                        <Button size='md' onClick={this.decreaseActiveSections}>-</Button>
+                        <Button
+                            size='md'
+                            onClick={this.decreaseActiveSections}
+                            disabled={this.state.activeSections === 0}
+                        >-</Button>
                     </Col>
                     <Col span={1} style={{textAlign: 'center'}}>
-                        <Button size='md' onClick={this.increaseActiveSections}>+</Button>
+                        <Button
+                            size='md'
+                            onClick={this.increaseActiveSections}
+                            disabled={this.state.activeSections === this.state.sectionsCount}
+                        >+</Button>
                     </Col>
                 </Grid>
             </div>

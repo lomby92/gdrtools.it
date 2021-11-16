@@ -1,4 +1,4 @@
-import { Anchor, Breadcrumbs, Container, Divider } from "@mantine/core"
+import { Anchor, Breadcrumbs, Container, Divider, NormalizeCSS } from "@mantine/core"
 import { useLocation } from "@reach/router"
 import { Link } from "gatsby"
 import React from "react"
@@ -42,6 +42,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <NormalizeCSS/>
       <Header/>
       <main>
         <Container style={{padding: '1rem'}}>

@@ -11,7 +11,7 @@ module.exports = {
     image: "/images/logo.png",
   },
   plugins: [
-     {
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `GDRTools.it`,
@@ -62,21 +62,25 @@ module.exports = {
     /**
      * Transformers
      */
-     `gatsby-plugin-image`,
-     `gatsby-transformer-sharp`,
-     {
-       resolve: `gatsby-plugin-sharp`,
-       options: {
-         defaults: {
-           formats: [
-             `auto`,
-             `webp`,
-             `avif`,
-           ],
-           quality: 100,
-           placeholder: "blurred",
-         },
-       },
-     },
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [
+            `auto`,
+            `webp`,
+            `avif`,
+          ],
+          quality: 100,
+          placeholder: "blurred",
+        },
+      },
+    },
+    /**
+     * Others
+     */
+    `gatsby-plugin-mantine`,
   ],
 };
